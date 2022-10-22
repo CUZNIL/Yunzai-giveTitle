@@ -6,6 +6,7 @@
 
 #### 安装教程
 
+0.  请确保你已经正确搭载了[云崽Bot v3](https://gitee.com/Le-niao/Yunzai-Bot)
 1.  将`giveTitle.js`文件放入`Yunzai-Bot/plugins/example`文件夹下
 2.  重启Yunzai-Bot
 
