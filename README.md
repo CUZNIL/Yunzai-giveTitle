@@ -6,9 +6,8 @@
 
 #### 安装教程
 
-1.  将本js文件放入Yunzai-Bot/plugins/example
+1.  将`giveTitle.js`文件放入`Yunzai-Bot/plugins/example`文件夹下
 2.  重启Yunzai-Bot
-3.  xxxx
 
 #### 使用说明
 
