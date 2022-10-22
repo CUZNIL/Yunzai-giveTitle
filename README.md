@@ -47,13 +47,7 @@
 - 设置成功的提示中增加了用户索取的头衔内容，以便于debug以及让用户及时了解自己的命令被如何识别。
 ![设置成功增加提示](use_in_README.md/%E8%AE%BE%E7%BD%AE%E6%88%90%E5%8A%9F%E5%A2%9E%E5%8A%A0%E6%8F%90%E7%A4%BA.png)
 - 删除了私聊使用对应命令时的提示 _删除原因：我的bot为了避免无端封号很早就禁用了私聊，我建议你们也这么做。_
+7.  可能还有别的改了，忘了。忘了就是不重要，如果你很在意可以去啃代码~
 
+#### 遇到问题？
 
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
