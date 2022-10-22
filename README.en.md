@@ -7,23 +7,40 @@ Of course , if you 闲得慌 , I won't stop you keep reading .
 
 
 #Yunzai Bot title plug-in (js plug-in)
+
 ####Introduction
+
 According to [xiaoxue plugin]（ https://gitee.com/XueWerY/xiaoxue-plugin/blob/master/apps/givetitle.js ）The title function of is rewritten, which does not depend on the original plug-in, and is applicable to [Yunzai Bot v3]（ https://gitee.com/Le-niao/Yunzai-Bot )
 ####Installation Tutorial
+
 1. Put the 'giveTitle. js' file in the' Yunzai Bot/plugins/example 'folder
+
 2. Restart Yunzai Bot
+
 ####Instructions
+
 Request exclusive title: ` #? (I want | (give | give | give | give | reward | send) (I | we | I | I | stupid | private | I | disdain | I | humble | father | mother | father | mother | father | milk | elder brother | elder sister | younger brother | younger sister))? Title (.)*$`
+
 Cancel exclusive title: ` #? (I don't want to | cancel | cancel | delete) the title$`
+
 Considering that regularity is not viewed by people, here are some examples of * * command usage * *:
+
 First, an example of setting a title
+
 ! [Set Title] (use_in_README. md/% E8% AE% BE% E7% BD% AE% E5% A4% B4% E8% A1% 94. png)
+
 If the picture does not load correctly, please [click here]（ https://gitee.com/CUZNIL/Yunzai-giveTitle/blob/master/use_in_README.md/%E8%AE%BE%E7%BD%AE%E5%A4%B4%E8%A1%94%E7%94%A8%E6%B3%95%E4%BE%8B.md )
+
 Then there is the example of removing the title
+
 ! [Cancel Title] (use_in_README. md/% E6% 92% A4% E9% 94% 80% E5% A4% B4% E8% A1% 94. png)
+
 If the picture does not load correctly, please [click here]（ https://gitee.com/CUZNIL/Yunzai-giveTitle/blob/master/use_in_README.md/%E6%92%A4%E9%94%80%E5%A4%B4%E8%A1%94%E7%94%A8%E6%B3%95%E4%BE%8B.md )
+
 ####What have I changed?
+
 First of all, emphasize the original address [Xiaoxue plug-in]（ https://gitee.com/XueWerY/xiaoxue-plugin/blob/master/apps/givetitle.js )
+
 1. Make * * command matching * * more user-friendly, and add a bunch of regular and several functions
 2. Delete the "getXiaoxuePermissionLevel" of the * * Xiaoxue Level * * judgment of the original plug-in_ Reason for deletion: This restriction is not required for individuals_
 3. Deleted * * duplicate title * * judgment 'isHisTitle'_ Reason for deletion: The same group can have the same exclusive title, and individuals do not need this restriction_
