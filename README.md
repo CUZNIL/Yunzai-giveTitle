@@ -23,8 +23,7 @@
 首先再强调一下原地址[小雪插件](https://gitee.com/XueWerY/xiaoxue-plugin/blob/master/apps/givetitle.js)
 
 1.  让命令匹配更人性化了
-2.  删去了原插件的小雪等级判定`getXiaoxuePermissionLevel`
-- 个人认为没太大必要
+2.  删去了原插件的小雪等级判定`getXiaoxuePermissionLevel`- 个人认为没太大必要
 
 3.  删去了重复头衔判定`isHisTitle`
 4.  保存全员头衔`getGroupMemberTitleList`、判断索取头衔是否已经给过`isGaveTitle`
