@@ -51,3 +51,10 @@
 
 #### 遇到问题？
 
+<div align="center">
+[![GitHub](https://img.shields.io/badge/GitHub-Yenai-black?style=flat-square&logo=github)](https://github.com/yeyang52/yenai-plugin) [![YunzaiBot](https://img.shields.io/badge/云崽-v3.0.0-black?style=flat-square&logo=dependabot)](https://gitee.com/Le-niao/Yunzai-Bot) [![tencent-qq](https://img.shields.io/badge/群号-638077675-red?style=flat-square&logo=tencent-qq)]() [![tencent-qq](https://img.shields.io/badge/QQ-746659424-success?style=flat-square&logo=tencent-qq)](https://qm.qq.com/cgi-bin/qm/qr?k=m6tyVb1v5y7a5_YK8CU7AoKyuR51aEaI&noverify=0&personal_qrcode_source=4)
+
+<br>
+
+</div>
+
