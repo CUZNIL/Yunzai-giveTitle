@@ -21,6 +21,8 @@
 
 ![设置头衔](use_in_README.md/%E8%AE%BE%E7%BD%AE%E5%A4%B4%E8%A1%94.png)
 
+如果图片没能正确加载请点击此处
+
 然后是撤销头衔的例子
 
 ![撤销头衔](use_in_README.md/%E6%92%A4%E9%94%80%E5%A4%B4%E8%A1%94.png)
