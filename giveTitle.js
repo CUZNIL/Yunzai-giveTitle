@@ -1,6 +1,9 @@
-//改写自小雪插件https://gitee.com/XueWerY/xiaoxue-plugin/blob/master/apps/givetitle.js
-//说是改写。。其实就是单纯删到只有头衔功能，加了些完全没技术含量的东西
-//2022年10月21日16:05:15
+/*
+改写自小雪插件https://gitee.com/XueWerY/xiaoxue-plugin/blob/master/apps/givetitle.js
+该改写版本的项目地址https://gitee.com/CUZNIL/Yunzai-giveTitle/ (应该是不会有更新，不过姑且标注一下)
+说是改写。。其实就是单纯删到只有头衔功能，加了些完全没技术含量的东西
+2022年10月22日23:32:55
+*/
 
 import plugin from '../../lib/plugins/plugin.js'
 export class Givetitle extends plugin {
