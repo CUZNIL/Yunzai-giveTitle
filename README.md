@@ -39,7 +39,7 @@
 4.  删去了保存全员头衔`getGroupMemberTitleList` _删除原因：这功能原本用于判断重复头衔，故也不需要了_ 
 5.  删去了判断用户索取头衔是否恰为他的当前头衔`isGaveTitle` _删除原因：个人不需要_
 6.  改写了头衔设置流程：
-- 用户索要的头衔过长时先裁切文本，并在设置成功的提示中告知QQ专属头衔的限制
+- 用户索要的头衔过长时先裁切文本，并在设置成功的提示中告知专属头衔的限制
 ![当你索要了过长的头衔](use_in_README.md/%E7%B4%A2%E8%A6%81%E8%BF%87%E9%95%BF%E7%9A%84%E5%A4%B4%E8%A1%94%E6%97%B6.png)
 - 设置失败的提示中删去了机器人昵称`${tools.botName}`。 _删除原因：个人不需要。并且如果想维护该功能较为麻烦，难以单独作为js插件使用，如有需要还是下[原插件](http://gitee.com/XueWerY/xiaoxue-plugin)吧！_
 ![原插件设置失败时](use_in_README.md/%E8%AE%BE%E7%BD%AE%E5%A4%B1%E8%B4%A5%E6%97%B6%E4%BC%9A%E8%B0%83%E7%94%A8%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%90%8D%E7%A7%B0.png)
@@ -51,10 +51,5 @@
 
 #### 遇到问题？
 
-<div align="center">
-[![GitHub](https://img.shields.io/badge/GitHub-Yenai-black?style=flat-square&logo=github)](https://github.com/yeyang52/yenai-plugin) [![YunzaiBot](https://img.shields.io/badge/云崽-v3.0.0-black?style=flat-square&logo=dependabot)](https://gitee.com/Le-niao/Yunzai-Bot) [![tencent-qq](https://img.shields.io/badge/群号-638077675-red?style=flat-square&logo=tencent-qq)]() [![tencent-qq](https://img.shields.io/badge/QQ-746659424-success?style=flat-square&logo=tencent-qq)](https://qm.qq.com/cgi-bin/qm/qr?k=m6tyVb1v5y7a5_YK8CU7AoKyuR51aEaI&noverify=0&personal_qrcode_source=4)
-
-<br>
-
-</div>
-
+群号 **638077675** 
+答案 火花骑士
