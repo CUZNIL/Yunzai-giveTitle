@@ -22,12 +22,12 @@
 
 首先再强调一下原地址[小雪插件](https://gitee.com/XueWerY/xiaoxue-plugin/blob/master/apps/givetitle.js)
 
-1.  让命令匹配更人性化了
-2.  删去了原插件的小雪等级判定`getXiaoxuePermissionLevel`- 个人认为没太大必要
-
-3.  删去了重复头衔判定`isHisTitle`
-4.  保存全员头衔`getGroupMemberTitleList`、判断索取头衔是否已经给过`isGaveTitle`
-3.  改写了头衔设置流程
+1.  让命令匹配更人性化了，加了一堆正则和几个函数
+2.  删去了原插件的小雪等级判定`getXiaoxuePermissionLevel` _删除原因：个人不需要这层限制_ 
+3.  删去了重复头衔判定`isHisTitle` _删除原因：同一个群可以有相同的专属头衔，个人不需要这层限制_ 
+4.  保存全员头衔`getGroupMemberTitleList` _删除原因：这功能原本用于判断重复头衔，故也不需要了_ 
+5.  判断索取头衔是否已经给过`isGaveTitle` _删除原因：个人不需要_
+6.  改写了头衔设置流程
 - 用户索要的头衔过长时先裁切文本，并在设置成功的提示中告知QQ专属头衔的限制
 - 设置成功的提示中删去了
 - 
