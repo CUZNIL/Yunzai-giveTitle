@@ -18,7 +18,7 @@
 考虑到正则不是人看的，这里列举说明一下命令使用方式：
 首先是设置头衔的例子
 
-![设置头衔](use_in_README.md/%E8%AE%BE%E7%BD%AE%E5%A4%B4%E8%A1%94.png)
+![设置头衔](use_in_README.md/%E8%AE%BE%E7%BD%AE%E5%A4%B4%E8%A1%94.png)![输入图片说明](use_in_README.md/%E8%AE%BE%E7%BD%AE%E5%A4%B4%E8%A1%94.png)
 
 然后是撤销头衔的例子
 
