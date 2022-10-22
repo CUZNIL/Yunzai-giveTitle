@@ -1,7 +1,7 @@
-# 云崽Bot头衔插件(js文件)
+# 云崽Bot头衔插件(js插件)
 
 #### 介绍
-根据[xiaoxue-plugin](https://gitee.com/XueWerY/xiaoxue-plugin/blob/master/apps/givetitle.js)的给头衔功能改写，适用于[Yunzai-Bot v3](https://gitee.com/Le-niao/Yunzai-Bot)
+根据[xiaoxue-plugin](https://gitee.com/XueWerY/xiaoxue-plugin/blob/master/apps/givetitle.js)的给头衔功能改写，不依赖于原插件，适用于[Yunzai-Bot v3](https://gitee.com/Le-niao/Yunzai-Bot)
 
 
 #### 安装教程
