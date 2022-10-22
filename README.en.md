@@ -1,7 +1,10 @@
-# 云崽Bot头衔插件
-
+# Yunzai-Bot giveTitle plugin (by .js)
+I'm sorry to tell you that , due to my laziness , all texts below are translated by [Baidu Translate](https://fanyi.baidu.com/) .
+If you can not read Chinese , I suggest that you should just install `giveTitle.js` into `Yunzai-Bot/plugins/example` .
+But if you can read Chinese , opening the [README.md](https://gitee.com/CUZNIL/Yunzai-giveTitle/blob/master/README.md) is recommended .
+Of course , if you 闲得慌 , I won't stop you keep reading .
 #### Description
-根据小雪插件的给头衔功能改写
+
 
 #### Software Architecture
 Software architecture description
