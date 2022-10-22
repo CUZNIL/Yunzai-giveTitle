@@ -1,4 +1,4 @@
-# 云崽Bot头衔插件
+# 云崽Bot头衔插件(js文件)
 
 #### 介绍
 根据[xiaoxue-plugin](https://gitee.com/XueWerY/xiaoxue-plugin/blob/master/apps/givetitle.js)的给头衔功能改写，适用于[Yunzai-Bot v3](https://gitee.com/Le-niao/Yunzai-Bot)
@@ -11,9 +11,11 @@
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+索要专属头衔：`#?((我要|(给|赐|赠|赏|送)(我|咱|朕|俺|愚|私|吾|鄙|敝|卑|爹|娘|爸|妈|爷|奶|哥|姐|弟|妹)))?头衔(.)*$`
+取消专属头衔：`#?(我不要|取消|撤销|删除)头衔了?$`
+
+考虑到正则不是人看的，这里列举几个命令使用方式：
+
 
 #### 参与贡献
 
