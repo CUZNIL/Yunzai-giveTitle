@@ -5,9 +5,9 @@
 
 
 #### 安装教程
-本插件为js插件，和其他插件一样扔在云崽根目录的`/plugins/example`下即可
-1.  xxxx
-2.  xxxx
+
+1.  将本js文件放入Yunzai-Bot/plugins/example
+2.  重启Yunzai-Bot
 3.  xxxx
 
 #### 使用说明
