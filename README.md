@@ -32,6 +32,7 @@
 ![当你索要了过长的头衔](use_in_README.md/%E7%B4%A2%E8%A6%81%E8%BF%87%E9%95%BF%E7%9A%84%E5%A4%B4%E8%A1%94%E6%97%B6.png)
 - 设置失败的提示中删去了机器人昵称`${tools.botName}` _删除原因：个人不需要_
 ![原插件设置失败时](use_in_README.md/%E8%AE%BE%E7%BD%AE%E5%A4%B1%E8%B4%A5%E6%97%B6%E4%BC%9A%E8%B0%83%E7%94%A8%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%90%8D%E7%A7%B0.png)
+![改写后](use_in_README.md/%E8%AE%BE%E7%BD%AE%E5%A4%B1%E8%B4%A5%E7%9A%84%E6%96%87%E6%9C%AC%E5%8F%98%E6%9B%B4.png)
 - 
 4.  新建 Pull Request
 
