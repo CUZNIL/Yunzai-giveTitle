@@ -1,10 +1,7 @@
 # 云崽Bot头衔插件
 
 #### 介绍
-根据小雪插件的给头衔功能改写
-
-#### 软件架构
-软件架构说明
+根据[xiaoxue-plugin](https://gitee.com/XueWerY/xiaoxue-plugin/blob/master/apps/givetitle.js)的给头衔功能改写，适用于Yunzai-Bot v3
 
 
 #### 安装教程
