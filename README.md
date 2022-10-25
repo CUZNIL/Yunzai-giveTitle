@@ -53,8 +53,8 @@
 
 #### 遇到问题/需要联系我/需要使用Bot
 
-群号 **638077675** 
+群号 **638077675**
 
 答案  **火花骑士** 
 
-![群](use_in_README.md/group.png)
+[![群](use_in_README.md/group.png)](http://jq.qq.com/?_wv=1027&k=tqiOtCVc)
