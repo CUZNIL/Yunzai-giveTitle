@@ -1,43 +1,22 @@
-/*
-改写自小雪插件https://gitee.com/XueWerY/xiaoxue-plugin/blob/master/apps/givetitle.js
-该改写版本的项目地址https://gitee.com/CUZNIL/Yunzai-giveTitle/ (应该是不会有更新，不过姑且标注一下)
-说是改写。。其实就是单纯删到只有头衔功能，加了些完全没技术含量的东西
-2022年10月22日23:32:55
-*/
-
-import plugin from '../../lib/plugins/plugin.js'
+//改写自旧版小雪插件https://gitee.com/XueWerY/xiaoxue-plugin
+//2023年4月18日10:45:35
+let reg = "#?(我要|(给|赐|赠|赏|送)(我|咱|朕|俺|愚|私|吾|鄙|敝|卑|爹|娘|爸|妈|爷|奶|哥|姐|弟|妹))?头衔"
+let regex = new RegExp(`^${reg}`)
 export class Givetitle extends plugin {
     constructor() {
         super({
             name: '给头衔',
             dsc: '给群成员一个头衔',
             event: 'message',
-            priority: 25,
+            priority: 233,
             rule: [
                 {
-                    reg: '^#(我要|(给|赐|赠|赏|送)(我|咱|朕|俺|愚|私|吾|鄙|敝|卑|爹|娘|爸|妈|爷|奶|哥|姐|弟|妹))头衔(.)*$',
+                    reg: `^${reg}.*$`,
                     fnc: 'giveTitle'
-                },
-                {
-                    reg: '^(我要|(给|赐|赠|赏|送)(我|咱|朕|俺|愚|私|吾|鄙|敝|卑|爹|娘|爸|妈|爷|奶|哥|姐|弟|妹))头衔(.)*$',
-                    fnc: 'giveTitle2'
-                },
-                {
-                    reg: '^#头衔(.)*$',
-                    fnc: 'giveTitle3'
-                },
-                {
-                    reg: '^头衔(.)*$',
-                    fnc: 'giveTitle4'
-                },
-                {
-                    reg: '^#?(我不要|取消|撤销|删除)头衔了?$',
-                    fnc: 'delTitle'
-                },
+                }
             ]
         })
     }
-
     /** 
      * 获取头衔关键词 
      */
@@ -61,9 +40,23 @@ export class Givetitle extends plugin {
     async giveTitleMain(e, title) {
         if (title == "") return
         if (e.group.is_owner) {
-            title = title.slice(0,5)
+            let len = 0, p = 0
+            if (title.length >= 6) {
+                while (p < title.length) {
+                    if (title[p].search(/[\u4e00-\u9fa5]/i) + 1)
+                        len += 2
+                    len++
+                    if (len > 18) {
+                        title = title.slice(0, p)+"…"
+                        break
+                    }
+                    p++
+                }
+            }
             e.group.setTitle(e.sender.user_id, title)
-            await this.reply(`\n头衔设置 ${title} 成功啦~`, true, { at: true })
+            title = " 头衔设置 " + title + " 成功啦~"
+            if (len > 18) title += "\n你要的头衔太长了~专属头衔最多六个汉字或者18个字母哦"
+            await this.reply(`${title}`, true, { at: true })
             return true
         }
         else {
@@ -73,24 +66,9 @@ export class Givetitle extends plugin {
     }
     async giveTitle(e) {
         if (this.getTitleKeyMain(e) == false) return
-        let title = e.message[0].text.slice(5)
+        let title = e.msg.replace(regex, "")
         return this.giveTitleMain(e, title)
     }
-    async giveTitle2(e) {
-        if (this.getTitleKeyMain(e) == false) return
-        let title = e.message[0].text.slice(4)
-        return this.giveTitleMain(e, title)
-    }
-    async giveTitle3(e) {
-        if (this.getTitleKeyMain(e) == false) return
-        let title = e.message[0].text.slice(3)
-        return this.giveTitleMain(e, title)
-    } async giveTitle4(e) {
-        if (this.getTitleKeyMain(e) == false) return
-        let title = e.message[0].text.slice(2)
-        return this.giveTitleMain(e, title)
-    }
-
     /** 
      * 撤销头衔 
      */
