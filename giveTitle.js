@@ -1,7 +1,7 @@
 //改写自旧版小雪插件https://gitee.com/XueWerY/xiaoxue-plugin
-//2023年4月18日10:45:35
-let reg = "#?(我要|(给|赐|赠|赏|送)(我|咱|朕|俺|愚|私|吾|鄙|敝|卑|爹|娘|爸|妈|爷|奶|哥|姐|弟|妹))?头衔"
-let regex = new RegExp(`^${reg}`)
+//2023年4月18日10:55:11
+let reg = "^#?(我要|(给|赐|赠|赏|送)(我|咱|朕|俺|愚|私|吾|鄙|敝|卑|爹|娘|爸|妈|爷|奶|哥|姐|弟|妹))?头衔"
+let regex = new RegExp(reg)
 export class Givetitle extends plugin {
     constructor() {
         super({
@@ -11,8 +11,12 @@ export class Givetitle extends plugin {
             priority: 233,
             rule: [
                 {
-                    reg: `^${reg}.*$`,
+                    reg: `${reg}.+$`,
                     fnc: 'giveTitle'
+                },
+                {
+                    reg: '^#?(我不要|取消|撤销|删除)头衔了?$',
+                    fnc: 'delTitle'
                 }
             ]
         })
@@ -44,23 +48,24 @@ export class Givetitle extends plugin {
             if (title.length >= 6) {
                 while (p < title.length) {
                     if (title[p].search(/[\u4e00-\u9fa5]/i) + 1)
-                        len += 2
-                    len++
+                        len += 3
+                    else
+                        len++
                     if (len > 18) {
-                        title = title.slice(0, p)+"…"
+                        title = title.slice(0, p) + "…"
                         break
                     }
                     p++
                 }
             }
             e.group.setTitle(e.sender.user_id, title)
-            title = " 头衔设置 " + title + " 成功啦~"
+            title = "你好呀！" + title + "！"
             if (len > 18) title += "\n你要的头衔太长了~专属头衔最多六个汉字或者18个字母哦"
-            await this.reply(`${title}`, true, { at: true })
+            await this.reply(`${title}`, true, { at: false })
             return true
         }
         else {
-            await this.reply(`\n抱歉啦~群主才可以设置专属头衔哦~`, true, { at: true })
+            await this.reply(`抱歉啦~群主才可以设置专属头衔哦~`, false, { at: false })
             return true
         }
     }
@@ -75,12 +80,9 @@ export class Givetitle extends plugin {
     async delTitle(e) {
         if (e.group.is_owner) {
             await e.group.setTitle(e.sender.user_id, '')
-            await this.reply('\n头衔撤销成功啦~', true, { at: true })
-            return true
-        }
-        else {
-            await this.reply(`\n抱歉啦~群主才可以撤销专属头衔哦~`, true, { at: true })
-            return true
+            await this.reply('头衔撤销成功啦~', true, { at: true })
+        } else {
+            await this.reply(`抱歉啦~群主才可以撤销专属头衔哦~`, false, { at: false })
         }
     }
 }
