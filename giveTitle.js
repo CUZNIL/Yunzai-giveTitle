@@ -1,7 +1,13 @@
 //改写自旧版小雪插件https://gitee.com/XueWerY/xiaoxue-plugin
-//2023年4月18日10:55:11
+//2023年4月18日11:28:32
+
+//头衔设置回复模板 可自行增添删改，注意格式。
+let TitleTemplete = [["你好呀！", "！"], ["很高兴认识你！", "！"], ["原来是", "，失敬失敬！"], ["头衔设置", "成功啦！"], ["你就是大名鼎鼎的", "？"],]
+
+//头衔匹配正则 不喜欢可自行增添删改。
 let reg = "^#?(我要|(给|赐|赠|赏|送)(我|咱|朕|俺|愚|私|吾|鄙|敝|卑|爹|娘|爸|妈|爷|奶|哥|姐|弟|妹))?头衔"
 let regex = new RegExp(reg)
+let random = 0
 export class Givetitle extends plugin {
     constructor() {
         super({
@@ -11,7 +17,7 @@ export class Givetitle extends plugin {
             priority: 233,
             rule: [
                 {
-                    reg: `${reg}.+$`,
+                    reg: `${reg}.{1,30}$`,
                     fnc: 'giveTitle'
                 },
                 {
@@ -42,7 +48,7 @@ export class Givetitle extends plugin {
      * 给头衔 
      */
     async giveTitleMain(e, title) {
-        if (title == "") return
+        if (title == "") returntou
         if (e.group.is_owner) {
             let len = 0, p = 0
             if (title.length >= 6) {
@@ -59,7 +65,8 @@ export class Givetitle extends plugin {
                 }
             }
             e.group.setTitle(e.sender.user_id, title)
-            title = "你好呀！" + title + "！"
+            random = (random + Math.floor(Math.random() * (TitleTemplete.length - 1)) + 1) % TitleTemplete.length
+            title = TitleTemplete[random][0] + title + TitleTemplete[random][1]
             if (len > 18) title += "\n你要的头衔太长了~专属头衔最多六个汉字或者18个字母哦"
             await this.reply(`${title}`, true, { at: false })
             return true
@@ -70,9 +77,10 @@ export class Givetitle extends plugin {
         }
     }
     async giveTitle(e) {
-        if (this.getTitleKeyMain(e) == false) return
-        let title = e.msg.replace(regex, "")
-        return this.giveTitleMain(e, title)
+        if (this.getTitleKeyMain(e)) {
+            let title = e.msg.replace(regex, "")
+            return this.giveTitleMain(e, title)
+        }
     }
     /** 
      * 撤销头衔 
